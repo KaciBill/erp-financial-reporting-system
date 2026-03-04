@@ -15,7 +15,32 @@ ERP modules into accounting and reporting systems.
 
 ## System Architecture
 
-Sales Data → Accounts Receivable → General Ledger
-Payroll Data → Expense Accounting → General Ledger
-Loans → Interest Expense → General Ledger
-Bank Data → Cash Reconciliation → Financial Close
+Customers
+   │
+   ▼
+Sales System (Sales Transactions Dataset)
+   │
+   ▼
+Revenue Journal Entries
+   │
+   ▼
+=========================
+      GENERAL LEDGER
+=========================
+   ▲        ▲        ▲
+   │        │        │
+Payroll   Treasury   Inventory
+System     / Loans     System
+   │        │        │
+   ▼        ▼        ▼
+Payroll   Loan &   Cost of Goods
+Expense   Interest      Sold
+Entries    Entries
+            │
+            ▼
+     Financial Statements
+     (Income Statement,
+      Cash Summary)
+            │
+            ▼
+      Power BI Dashboard
