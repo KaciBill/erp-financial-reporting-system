@@ -12,3 +12,10 @@ and BI reporting.
 Organizations need integrated systems that transform operational transactions into 
 financial reporting. This project demonstrates how operational data flows through 
 ERP modules into accounting and reporting systems.
+
+## System Architecture
+
+Sales Data → Accounts Receivable → General Ledger
+Payroll Data → Expense Accounting → General Ledger
+Loans → Interest Expense → General Ledger
+Bank Data → Cash Reconciliation → Financial Close
